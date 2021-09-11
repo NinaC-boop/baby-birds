@@ -11,6 +11,11 @@ import Chatbot from './components/Chatbot';
 
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      sm: 525,
+    }
+  },
   typography: {
     "fontFamily": `"Lato", sans-serif`,
     h2: {
