@@ -7,17 +7,26 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import '../styles/Nav.css';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: '0 0 10pt 0'
+    padding: '0 0 10pt 0',
+    display: 'flex',
     /* background: '#6BA78E', */
   },
   nav: {
     background: '#6BA78E',
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
+    zIndex: theme.zIndex.drawer + 1,
   },
   menuButton: {
     /* marginRight: theme.spacing(2), */
@@ -27,6 +36,16 @@ const useStyles = makeStyles((theme) => ({
   },
   space: {
     flexGrow: 1,
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  drawerContainer: {
+    overflow: 'auto',
   },
 }));
 
@@ -46,6 +65,26 @@ export default function Nav() {
           </IconButton>
         </Toolbar>
       </AppBar>
+      <Drawer
+        className={classes.drawer}
+        variant="permanent"
+        anchor="right"
+        classes={{
+          paper: classes.drawerPaper,
+        }}
+      >
+        <Toolbar />
+        <div className={classes.drawerContainer}>
+          <List>
+            {['Chat', 'Resources', 'Support', 'About'].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
+          <Divider />
+        </div>
+      </Drawer>
     </div>
   );
 }
