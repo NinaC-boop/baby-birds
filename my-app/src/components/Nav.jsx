@@ -11,6 +11,7 @@ import '../styles/Nav.css';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    padding: '0 0 10pt 0'
     /* background: '#6BA78E', */
   },
   nav: {

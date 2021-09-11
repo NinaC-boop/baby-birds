@@ -6,31 +6,48 @@ import {
   Link
 } from "react-router-dom";
 import Nav from './components/Nav';
-import { createTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import Chatbot from './components/Chatbot';
 
 
 const theme = createTheme({
-  /* "background": "#D8E7E1", */
   typography: {
     "fontFamily": `"Lato", sans-serif`,
     h2: {
       fontWeight: 400,
     } 
   },
+  palette: {
+    background: {
+      sm: 'white',
+    }
+  },
 });
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    [theme.breakpoints.down(425)]: {
+      backgroundColor: 'white',
+    },
+    [theme.breakpoints.up(425)]: {
+      backgroundColor: '#D8E7E1',
+    },
+  },
+}));
+
 function App() {
+  const classes = useStyles();
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
       <div className="App">
 
-        <Nav/>
+        
         <Router>
-        <div>
+        <div className={classes.root}>
           <nav>
-            <ul>
+            <Nav/>
+            {/* <ul>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -40,7 +57,7 @@ function App() {
               <li>
                 <Link to="/users">Link2</Link>
               </li>
-            </ul>
+            </ul> */}
           </nav>
 
           <Chatbot />
