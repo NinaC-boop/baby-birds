@@ -1,5 +1,5 @@
 # Simple React Chatbot Client
-
+taken and edited from https://codesandbox.io/s/modest-silence-w3o2g?file=/src/index.js
 
 ## Screenshot
 
