@@ -8,7 +8,7 @@ import {
 import Nav from './components/Nav';
 import { createTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import Chatbot from './components/Chatbot';
-
+import Resources from '../src/pages/Resources';
 
 const theme = createTheme({
   breakpoints: {
@@ -69,7 +69,8 @@ function App() {
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/about">
+            <Route path="/resources">
+              <Resources/>
             </Route>
             <Route path="/users">
             </Route>
