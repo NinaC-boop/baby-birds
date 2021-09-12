@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Nav from './components/Nav';
 import { createTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
-import Chatbot from './components/Chatbot';
+import Chatbot from './Chatbot/index.js';
 
 
 const theme = createTheme({
