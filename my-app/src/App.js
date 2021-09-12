@@ -7,7 +7,12 @@ import {
 } from "react-router-dom";
 import Nav from './components/Nav';
 import { createTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
+<<<<<<< HEAD
 import Chatbot from './Chatbot/index.js';
+=======
+import AllResources from '../src/pages/AllResources';
+import Chatbot from './components/Chatbot';
+>>>>>>> resource-page
 
 
 const theme = createTheme({
@@ -66,14 +71,12 @@ function App() {
             {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
             <Switch>
-              <Route path="/about">
-              </Route>
-              <Route path="/users">
+              <Route path="/all_resources">
+                <AllResources />
               </Route>
               <Route path="/">
               </Route>
             </Switch>
-
           </div>
         </div>
       </Router>
