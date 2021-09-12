@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Nav from './components/Nav';
 import { createTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
+import AllResources from '../src/pages/AllResources';
 import Chatbot from './components/Chatbot';
 
 
@@ -73,8 +74,12 @@ function App() {
             </Route>
             <Route path="/users">
             </Route>
+            <Route path="/all_resources">
+              <AllResources />
+            </Route>
             <Route path="/">
             </Route>
+
           </Switch>
 
           
