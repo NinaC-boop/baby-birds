@@ -59,41 +59,46 @@ export default function DomesticViolence() {
         <Container className={classes.container}>
             <h1>Resources</h1>
             <hr className={classes.hr}></hr>
+
+
             <div className={classes.card}>
               <a href="https://www.1800respect.org.au/" className={classes.link}>1800Respect</a>
               <p>1800RESPECT is the national online and telephone counselling and support service for people who have experienced, or are at risk of experiencing, sexual assault and/or domestic and family violence, their family and friends, and frontline and isolated workers.</p>
               <div className={classes.phoneNumber}>
-                <div><i>Call service:</i> </div>
-                
-                <div> <p>1800Respect</p> </div>
-               
-                <div><p>24/7</p> </div>
-                
+                <i>Call service:</i>
+                <p>1800Respect</p>
+                <p>24/7</p>
               </div>
             </div>
 
             <div className={classes.card}>
               <a href="https://www.facs.nsw.gov.au/domestic-violence/helpline" className={classes.link}>Domestic Violence Line (NSW)</a>
               <p>The NSW Domestic Violence Line provides counselling and referrals to women experiencing domestic and family violence.</p>
-              <i>Call service:</i>
-              <p>1800 65 64 63</p>
-              <p>24/7</p>
+              <div className={classes.phoneNumber}>
+                <i>Call service:</i>
+                <p>1800 65 64 63</p>
+                <p>24/7</p>
+              </div>
             </div>
 
             <div className={classes.card}>
               <a href="https://mensline.org.au/" className={classes.link}>MensLine</a>
               <p>MensLine Australia offers telephone, online chat and video counselling for men with family and relationship concerns.</p>
-              <i>Call service:</i>
-              <p>1300 78 99 78</p>
-              <p>24/7</p>
+              <div className={classes.phoneNumber}>
+                <i>Call service:</i>
+                <p>1300 78 99 78</p>
+                <p>24/7</p>
+              </div>
             </div>
 
             <div className={classes.card}>
               <a href="https://kidshelpline.com.au/" className={classes.link}>Kids Helpline</a>
               <p>Kids Helpline is Australia’s only free (even from a mobile), confidential 24/7 online and phone counselling service for young people aged 5 to 25.</p>
-              <i>Call service:</i>
-              <p>1800 551 800</p>
-              <p>24/7</p>
+              <div className={classes.phoneNumber}>
+                <i>Call service:</i>
+                <p>1800 551 800</p>
+                <p>24/7</p>
+              </div>
             </div>
         </Container>
 
