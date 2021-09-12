@@ -1,11 +1,21 @@
 import sqlite3
 
 conn = sqlite3.connect('database.db')
-print "Opened database successfully";
+print("Opened database successfully")
 
-conn.execute('CREATE TABLE students (name TEXT, addr TEXT, city TEXT, pin TEXT)')
-print "Table created successfully";
-conn.close();
+conn.execute('CREATE TABLE queues (userid INTEGER PRIMARY KEY, position INTEGER, helplineid INTEGER NOT NULL)')
+print("Table created successfully")
+con.commit()
+conn.close()
+
+conn = sqlite3.connect('database.db')
+print("Opened database successfully")
+
+conn.execute('CREATE TABLE helplines (name TEXT, phone TEXT, text TEXT, website TEXT, chat TEXT, description TEXT, availability TEXT, postcode INTEGER,  helplineid INTEGER PRIMARY KEY)')
+print("Table created successfully")
+con.commit()
+conn.close()
+
 
 ############# ADD A TABLE ROW #############
 
