@@ -38,6 +38,14 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#D8E7E1',
     },
   },
+  main: {
+    [theme.breakpoints.down(830)]: {
+      paddingRight: 0,
+    },
+    [theme.breakpoints.up(830)]: {
+      paddingRight: '10vw',
+    },
+  }
 }));
 
 function App() {
@@ -49,35 +57,24 @@ function App() {
 
         
         <Router>
-        <div className={classes.root}>
           <nav>
             <Nav/>
-            {/* <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">Link</Link>
-              </li>
-              <li>
-                <Link to="/users">Link2</Link>
-              </li>
-            </ul> */}
           </nav>
+        <div className={classes.root}>  
+          <div className={classes.main}>
+            <Chatbot />
+            {/* A <Switch> looks through its children <Route>s and
+                renders the first one that matches the current URL. */}
+            <Switch>
+              <Route path="/about">
+              </Route>
+              <Route path="/users">
+              </Route>
+              <Route path="/">
+              </Route>
+            </Switch>
 
-          <Chatbot />
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
-          <Switch>
-            <Route path="/about">
-            </Route>
-            <Route path="/users">
-            </Route>
-            <Route path="/">
-            </Route>
-          </Switch>
-
-          
+          </div>
         </div>
       </Router>
       </div>

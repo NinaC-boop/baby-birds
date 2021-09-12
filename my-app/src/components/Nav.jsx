@@ -12,8 +12,10 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import clsx from 'clsx';
 
-const drawerWidth = 240;
+
+const drawerWidth = '10vw';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,18 +30,18 @@ const useStyles = makeStyles((theme) => ({
     borderBottomRightRadius: 8,
     zIndex: theme.zIndex.drawer + 1,
   },
-  menuButton: {
-    /* marginRight: theme.spacing(2), */
-  },
-  title: {
-    
-  },
   space: {
     flexGrow: 1,
   },
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    [theme.breakpoints.up(830)]: {
+      display: 'block',
+    },
+    [theme.breakpoints.down(830)]: {
+      display: 'none',
+    },
   },
   drawerPaper: {
     width: drawerWidth,
@@ -47,10 +49,30 @@ const useStyles = makeStyles((theme) => ({
   drawerContainer: {
     overflow: 'auto',
   },
+  menuButton: {
+    [theme.breakpoints.down(830)]: {
+      display: 'block',
+    },
+    [theme.breakpoints.up(830)]: {
+      display: 'none',
+    },
+  },
+  hide: {
+    display: 'none',
+  },
 }));
 
 export default function Nav() {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div className={classes.root}>
@@ -60,7 +82,7 @@ export default function Nav() {
             BabyBird
           </Typography>
           <div className={classes.space}/>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton edge="start" className={classes.menuButton} onClick={handleDrawerOpen} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
         </Toolbar>
