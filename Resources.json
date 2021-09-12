@@ -1,0 +1,57 @@
+{
+    "topics": [
+        "Anxiety",
+        "Domestic Violence",
+        "Mental Health",
+        "Bullying",
+        "LGBTQ+",
+        "Disabilities",
+        "Men",
+        "Women",
+        "Youth",
+        "Loneliness",
+        "Emergency",
+        "Immediate Emergency",
+        "Family",
+        "Addiction",
+        "Insomnia",
+        "Grief",
+        "Eating Disorders",
+        "Homelessness",
+        "Support",
+        "Coronavirus",
+        "Basic Needs",
+        "Racism",
+        "Self Harm"
+    ],
+    "Domestic Violence": [
+      {
+        "Help lines": [
+            {
+                "serviceName": "1800Respect",
+                "description": "1800RESPECT is the national online and telephone counselling and support service for people who have experienced, or are at risk of experiencing, sexual assault and/or domestic and family violence, their family and friends, and frontline and isolated workers.",
+                "phoneNumber": "1800RESPECT",
+                "availability": "24/7"
+            },
+            {
+                "serviceName": "Domestic Violence Line (NSW)",
+                "description": "The NSW Domestic Violence Line provides counselling and referrals to women experiencing domestic and family violence.",
+                "phoneNumber": "1800 65 64 63",
+                "availability": "24/7"
+            },
+            {
+                "serviceName": "MensLine",
+                "description": " MensLine Australia offers telephone, online chat and video counselling for men with family and relationship concerns.",
+                "phoneNumber": "1300 78 99 78",
+                "availability": "24/7"
+            },
+            {
+                "serviceName": "Kids Helpline",
+                "description": "Kids Helpline is Australia’s only free (even from a mobile), confidential 24/7 online and phone counselling service for young people aged 5 to 25.",
+                "phoneNumber": "1800 551 800",
+                "availability": "24/7"
+            }
+        ]
+      }
+    ]
+  }
