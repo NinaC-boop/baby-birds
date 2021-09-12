@@ -7,13 +7,8 @@ import {
 } from "react-router-dom";
 import Nav from './components/Nav';
 import { createTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
-<<<<<<< HEAD
 import Chatbot from './Chatbot/index.js';
-=======
 import AllResources from '../src/pages/AllResources';
-import Chatbot from './components/Chatbot';
->>>>>>> resource-page
-
 
 const theme = createTheme({
   breakpoints: {
