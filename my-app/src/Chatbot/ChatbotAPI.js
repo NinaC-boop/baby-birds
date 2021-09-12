@@ -4,8 +4,9 @@ const API = {
     return new Promise(function(resolve, reject) {
       if (r && r.answers && r.answers.length > 0) {
         resolve(r.answers[0].answer);
+        console.log(r)
       }
-      resolve("No answer.");
+      resolve("Let me help you. Do you need any assistance?");
     });
   }
 };

@@ -9,6 +9,7 @@ export default function BotMessage({ fetchMessage }) {
       const msg = await fetchMessage();
       setLoading(false);
       setMessage(msg);
+      console.log(msg)
     }
     loadMessage();
   }, [fetchMessage]);
